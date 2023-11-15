@@ -13,22 +13,26 @@ for (let i = 0; i < business.length; i++) {
 //Creates section and cards
 let card = document.createElement("section");
 card.className = "card";
-//Creates Title
+
+//Grabs name
 let h2 = document.createElement("h2");
 h2.textContent = business[i].name;
 card.appendChild(h2);
 document.querySelector("div.cards").appendChild(card);
 
+//Grabs Image
 let businessImg = document.createElement("img")
 businessImg.src = business[i].imageurl;
 card.appendChild(businessImg);
 document.querySelector("div.cards").appendChild(card);
 
+//Grabs Address
 let address = document.createElement('p');
 address.textContent = business[i].address;
 card.appendChild(address);
 document.querySelector('div.cards').appendChild(card);
 
+//Grabs description
 let des = document.createElement("p");
 des.textContent = business[i].description;
 card.appendChild(des);
